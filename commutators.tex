@@ -1,6 +1,56 @@
-\chapter{Commutators \& Uncertainty Principle}
+\section{Commutators and  Uncertainty Principle}
 For a Hermitian operator $A$, we define the variance $\Delta A$ using
-the expression
+the expression (expectation of square minus square of expectation)
+\begin{equation*}
+  \begin{split}
+    (\Delta A)^2 & =  \expval{A^2} - \expval{A}^2 \\
+                 & =  \expval{(A-\expval{A})^2} \\
+                 & =  \expval{U^2}.
+  \end{split}
+\end{equation*}
+where $U = A-\expval{A}$. We will have a similar definition for
+another Hermitian operator $B$. For this operator, we will define
+another operator $V$ so that the following relationships hold
+\begin{equation*}
+  \begin{split}
+    U & = A - \expval{A} \\
+    V & = B - \expval{B} \\
+    (\Delta A)^2 & = \expval{U^2} \\
+    (\Delta B)^2 & = \expval{V^2}.
+  \end{split}
+\end{equation*}
+
+Now consider the expression $\expval{U + i\lambda V}$ for some
+arbitrary but real $\lambda$. The following relationships hold.
+\begin{equation}\label{ineq1}
+\begin{split}
+  \expval{U + i\lambda V} & \ge 0 \\
+  \expval{U} + \lambda^2\expval{V} +
+  i\lambda\expval{U\cdot V} - i\lambda\expval{V\cdot U} &
+  \ge 0. 
+\end{split}
+\end{equation}
+
+If we define the commutator of $U$ and $V$ as
 \[
-(\Delta A)^2 = \expval{A^2}{\Psi} - \expval{A}{\Psi}
+\commutator{U}{V} = UV - VU,
 \]
+then note that $\commutator{U}{V} = \commutator{A}{B}$. Then
+Eqn~\ref{ineq1} can be simplified as
+\begin{equation*}
+  \expval{U} + \lambda^2\expval{V} + i\lambda\expval{\commutator{U}{V}} \ge 0.
+\end{equation*}
+
+This is a quadratic equation in $\lambda$ which cannot have a real
+solution implying that the discriminant is negative. This implies
+\begin{equation*}
+  \begin{split}
+    -\expval{\commutator{U}{V}}^2 -4\expval{U}\expval{V} & \le 0 \\
+    4\expval{U}\expval{V} & \ge -\expval{\commutator{U}{V}}^2 \\
+    (\Delta A)^2(\Delta B)^2 \ge \expval{\frac{i}{2}\commutator{U}{V}}
+    \\
+    (\Delta A)(\Delta B) \ge \frac{i}{2}\expval{\commutator{A}{B}}
+  \end{split}
+\end{equation*}
+
+This is the general uncertainty relation between observables.
