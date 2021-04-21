@@ -1,0 +1,29 @@
+\section{Position \& Momentum Commutation Relationship}{\label{subj:qm_sec:comm}}
+
+In this section we will derive the canonical position \& momentum
+commutation relationship. We know that the position and momentum for the $i^{th}$ coordinate are $x^i$ and $i\hbar\pdv{x^i}$ respectively. Hence
+\begin{equation*}
+  \begin{split}
+    \commutator{x^i}{p_i} & = i\hbar\int \left(  \Psi^* x^i \pdv{x^i} \Psi \right) - i\hbar\int \left(  \Psi^* \pdv{x^i}(x^i \Psi) \right) \\
+    & = i\hbar\int \left(  \Psi^* x^i \pdv{x^i} \Psi \right) - i\hbar\int \left(  \Psi^* x^i \pdv{x^i} \Psi \right) + i\hbar\int \left(  \Psi^* \pdv{x^i}{x^} \Psi \right) \\
+    & = i\hbar\int \left(\Psi^*\Psi\right)
+  \end{split}
+\end{equation*}
+
+Since, the wavefunction $\Psi$ is assumed to be normalized, we get the
+relationship
+\[
+\commutator{x^i}{p_i} = i\hbar
+\]
+
+From section~\ref{subj:qm_sec:comm}, we know that for any two
+operators, $A$ and $B$, the standard deviation in $A$ and $B$ have the
+relationship
+\[
+    (\Delta A)(\Delta B) \ge \frac{i}{2}\expval{\commutator{A}{B}}
+\]
+
+This means, we now have the famous uncertainty relationship
+\[
+(\Delta x^i)(\Delta p_i) \ge \frac{\hbar}{2}
+\]
